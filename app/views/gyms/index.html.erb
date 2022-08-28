@@ -1,11 +1,13 @@
 <h1>Os meus escolhidos</h1>
 
-<% @gyms.each do |gym| %>
-  <div class="card">
-    <h2><%= gym.name %></h2>
-    <p>Endereço: <%= gym.address %></p>
-    <p>Idas por mês: <%= gym.amount_of_times %></p>
-  </div>
-<% end %>
+<div class="cards">
+  <% @gyms.each do |gym| %>
+    <div class="card">
+      <h2><%= gym.name %></h2>
+      <p>Endereço: <%= gym.address %></p>
+      <p>Idas por mês: <%= gym.amount_of_times %></p>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to '+ Adicionar', new_gym_path %>
