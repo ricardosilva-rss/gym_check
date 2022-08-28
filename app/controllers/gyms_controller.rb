@@ -1,12 +1,12 @@
 class GymsController < ApplicationController
-  before_action :set_gym, only: %i[show edit update destroy]
+  before_action :set_gym, only: %i[edit update destroy]
 
   def index
     @gyms = Gym.all
   end
 
-  def show
-  end
+  # def show
+  # end
 
   def new
     @gym = Gym.new
@@ -16,7 +16,7 @@ class GymsController < ApplicationController
     @gym = Gym.new(gym_params)
 
     if @gym.save
-      redirect_to gym_path(@gym)
+      redirect_to gyms_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class GymsController < ApplicationController
 
   def update
     if @gym.update(gym_params)
-      redirect_to gym_path(@gym)
+      redirect_to gyms_path
     else
       render :edit, status: :unprocessable_entity
     end
