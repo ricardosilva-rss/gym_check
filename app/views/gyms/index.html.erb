@@ -1,0 +1,9 @@
+<h1>My gyms</h1>
+
+<% @gyms.each do |gym| %>
+  <div class="card">
+    <%= gym.name %>
+    <%= gym.address %>
+    <%= gym.amount_of_times %>
+  </div>
+<% end %>
