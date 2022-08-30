@@ -3,10 +3,14 @@
 <div class="cards">
   <% @gyms.each do |gym| %>
     <div class="card">
-      <h2><%= gym.name %></h2>
-      <p>Idas por mês: <%= gym.amount_of_times %></p>
-      <%= link_to edit_gym_path(gym) do %><i class="fa-solid fa-pen"></i><% end %>
-      <%= link_to gym_path(gym), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %><i class="fa-solid fa-trash-can"></i><% end %>
+      <div class="card-info">
+        <h2><%= gym.name %></h2>
+        <p>Idas por mês: <%= gym.amount_of_times %></p>
+      </div>
+      <div class="card-links">
+        <%= link_to edit_gym_path(gym) do %><i class="fa-solid fa-pen"></i><% end %>
+        <%= link_to gym_path(gym), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %><i class="fa-solid fa-trash-can"></i><% end %>
+      </div>
     </div>
   <% end %>
 </div>
