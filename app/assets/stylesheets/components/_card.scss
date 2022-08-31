@@ -1,22 +1,33 @@
-.cards {
+.gym-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.card {
+.gym-card {
   display: flex;
   flex-direction: column;
+}
+
+.gym-card-info {
   width: 400px;
+  // height: 200px;
+  padding: 10px;
+  margin: 5px 5px 0 5px;
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(64, 221, 64);
 }
 
-.card-info {
-  padding: 5px;
-  border-radius: 5px 5px 0 0;
-  background-color: green;
-}
+.gym-card-links {
+  text-align: end;
+  padding: 10px;
+  padding: 0 10px 0 10px;
+  margin: 0 5px 5px 5px;
+  border: 1px solid rgb(64, 221, 64);
+  border-radius: 0 0 10px 10px;
 
-.card-links {
-  padding: 5px;
-  border-radius: 0 0 5px 5px;
+  a {
+    margin: 5px;
+    color: rgb(70, 186, 70);
+  }
 }
