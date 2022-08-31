@@ -5,9 +5,6 @@ class GymsController < ApplicationController
     @gyms = Gym.all
   end
 
-  # def show
-  # end
-
   def new
     @gym = Gym.new
   end

@@ -1,5 +1,7 @@
 <h1>Os meus escolhidos</h1>
 
+<%= link_to '+ Adicionar', new_gym_path, class:"btn btn-success" %>
+
 <div class="gym-cards">
   <% @gyms.each do |gym| %>
     <div class="gym-card">
@@ -14,5 +16,3 @@
     </div>
   <% end %>
 </div>
-
-<%= link_to '+ Adicionar', new_gym_path %>
